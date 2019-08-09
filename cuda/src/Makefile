@@ -5,7 +5,7 @@ CHARMDIR = $(HOME)/charmworks/charm/netlrts-linux-x86_64-cuda
 AMPICXX = $(CHARMDIR)/bin/ampicxx
 
 NVCC		= nvcc
-FLAGS		= -arch=sm_60 -I$(CHARMDIR)/include -I$(CHARMDIR)/include/ampi -DUSE_MPI
+FLAGS		= -arch=sm_60 -I$(CHARMDIR)/include -I$(CHARMDIR)/include/ampi -DUSE_MPI -O0 -g
 DFLAGS	= $(MPI_FLAGS) -lineinfo
 RFLAGS 	= $(MPI_FLAGS) -O3 -DNDEBUG
 
